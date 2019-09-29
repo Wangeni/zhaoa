@@ -1,0 +1,95 @@
+<!-- <van-steps :active="{{ active }}">
+  <van-step>Step1</van-step>
+  <van-step>Step2</van-step>
+  <van-step>Step3</van-step>
+  <van-step>Step4</van-step>
+</van-steps> -->
+
+<view wx:for="{{ques_list}}" wx:key="key" wx:for-index="idx">
+
+  <!-- <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"             disabled="{{disabled}}" bindtap="primary"> primary </button> -->
+  <view wx:if="{{idx == active}}">
+
+    <view>
+      <van-steps steps="{{ steps }}" active="{{idx}}" />
+    </view>
+
+    <van-panel title="{{idx+1}}.{{item.ask}}" desc="" status="">
+      <div>
+        <van-cell-group>
+
+          <!-- <van-icon name="passed" />  -->
+          <!-- <van-tag type="success">Tag</van-tag> -->
+
+          <!-- A -->
+          <view wx:if="{{choose=='A' && answer!='A'}}">
+            <van-cell icon="close" title="{{item.A}}" data-choose="A" data-id="{{item._id}}"  data-ask="{{item.ask}}" data-mark="{{mark}}" data-answer="{{item.answer}}" bind:click="checkChoice" value="A" />
+          </view>
+          <view wx:elif="{{answer=='A'}}">
+            <van-cell icon="passed" title="{{item.A}}" data-choose="A" data-id="{{item._id}}"  data-ask="{{item.ask}}" data-mark="{{mark}}" data-answer="{{item.answer}}" bind:click="checkChoice" value="A" />
+          </view>
+          <view wx:else>
+            <van-cell title="{{item.A}}" data-choose="A" data-id="{{item._id}}"  data-ask="{{item.ask}}" data-mark="{{mark}}" data-answer="{{item.answer}}" bind:click="checkChoice" value="A" />
+          </view>
+          <!-- B -->
+          <view wx:if="{{choose=='B' && answer!='B'}}">
+            <van-cell icon="close" title="{{item.B}}" data-choose="B" data-id="{{item._id}}"  data-ask="{{item.ask}}" data-mark="{{mark}}" data-answer="{{item.answer}}" bind:click="checkChoice" value="B" />
+          </view>
+          <view wx:elif="{{answer=='B'}}">
+            <van-cell icon="passed" title="{{item.B}}" data-choose="B" data-id="{{item._id}}"  data-ask="{{item.ask}}" data-mark="{{mark}}" data-answer="{{item.answer}}" bind:click="checkChoice" value="B" />
+          </view>
+          <view wx:else>
+            <van-cell title="{{item.B}}" data-choose="B" data-id="{{item._id}}"  data-ask="{{item.ask}}" data-mark="{{mark}}" data-answer="{{item.answer}}" bind:click="checkChoice" value="B" />
+          </view>
+          <!-- C -->
+          <view wx:if="{{choose=='C' && answer!='C'}}">
+            <van-cell icon="close" title="{{item.C}}" data-choose="C" data-id="{{item._id}}"  data-ask="{{item.ask}}" data-mark="{{mark}}" data-answer="{{item.answer}}" bind:click="checkChoice" value="C" />
+          </view>
+          <view wx:elif="{{answer=='C'}}">
+            <van-cell icon="passed" title="{{item.C}}" data-choose="C" data-id="{{item._id}}"  data-ask="{{item.ask}}" data-mark="{{mark}}" data-answer="{{item.answer}}" bind:click="checkChoice" value="C" />
+          </view>
+          <view wx:else>
+            <van-cell title="{{item.C}}" data-choose="C" data-id="{{item._id}}"  data-ask="{{item.ask}}" data-mark="{{mark}}" data-answer="{{item.answer}}" bind:click="checkChoice" value="C" />
+          </view>
+          <!-- D -->
+          <view wx:if="{{choose=='D' && answer!='D'}}">
+            <van-cell icon="close" title="{{item.D}}" data-choose="D" data-id="{{item._id}}"  data-ask="{{item.ask}}" data-mark="{{mark}}" data-answer="{{item.answer}}" bind:click="checkChoice" value="D" />
+          </view>
+          <view wx:elif="{{answer=='D'}}">
+            <van-cell icon="passed" title="{{item.D}}" data-choose="D" data-id="{{item._id}}"  data-ask="{{item.ask}}" data-mark="{{mark}}" data-answer="{{item.answer}}" bind:click="checkChoice" value="D" />
+          </view>
+          <view wx:else>
+            <van-cell title="{{item.D}}" data-choose="D" data-id="{{item._id}}"  data-ask="{{item.ask}}" data-mark="{{mark}}" data-answer="{{item.answer}}" bind:click="checkChoice" value="D" />
+          </view>
+
+        </van-cell-group>
+        <!-- <view></view>
+      <view>B.{{item.B}}</view>
+      <view>C.{{item.C}}</view>
+      <view>D.{{item.D}}</view> -->
+      </div>
+    </van-panel>
+
+<view class="bbSubmit">
+     <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="correct" data-index="{{idx}}" data-id="{{item._id}}" data-key="{{item.randomKey}}"> 纠错 </button>
+</view>
+    <!-- <van-button icon="star-o" type="primary">按钮</van-button> -->
+    <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" data-index="{{idx}}" bindtap="nextQues"> 下一题 </button>
+    <!-- <van-button tag="float:right" type="primary" bind:click="nextQues">下一题</van-button> -->
+    <!-- <button type="primary" class="van-button van-button--default van-button--normal"><span class="van-button__text">下一题</span></button> -->
+
+    <!-- <van-toast id="van-toast" /> -->
+    ​
+    <van-dialog id="van-dialog" />
+    <!-- <van-button type="primary" bind:click="onClick">弹出</van-button> -->
+
+  </view>
+
+
+</view>
+
+<!-- <van-row>
+  <van-col offset="12" span="12">
+    <van-button size="small" type="primary">Button</van-button>
+  </van-col>
+</van-row> -->

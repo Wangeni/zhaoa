@@ -1,0 +1,39 @@
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 100px;
+}
+
+.footerText {
+  font-size: 25rpx;
+  color: #a2abb3 ;
+  position: fixed;
+  bottom: 25px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.progress{
+  width: 128rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,48 @@
+<!-- <view wx:for="{{sourceList}}" wx:key="key" wx:for-index="idx">
+  <!-- <van-cell title="{{idx+1}}.{{item.ask}}" is-link value="" bind:click=""/>  -->
+
+<!-- <van-collapse v-model="activeNames">
+    <van-collapse-item title="{{idx+1}}.{{item.ask}}" is-link name="{{idx+1}}">内容</van-collapse-item>
+  </van-collapse>
+
+</view> -->
+
+<van-notice-bar mode="closeable" color="#1989fa" background="#ecf9ff" left-icon="info-o" text="可查看最近的20条记录，如果页面空白请返回上一页点击'获取头像昵称'按钮">
+</van-notice-bar>
+
+<van-tabs v-model="active" animated>
+  <van-tab v-for="index in 2" title="答题历史">
+    <!-- <div slot="title">
+      <van-icon name="more-o" />选项
+    </div>
+    内容 {{ index }} -->
+    <view wx:for="{{sourceList}}" wx:key="key" wx:for-index="idx">
+      <van-collapse value="{{ activeNames }}" data-id="{{item.ques_id}}" bind:change="onChange" accordion>
+        <van-collapse-item title="{{idx+1}}.{{item.ask}}" name="{{idx+1}}">
+          {{answer}}
+        </van-collapse-item>
+      </van-collapse>
+    </view>
+  </van-tab>
+  <van-tab v-for="index in 2" title="只看错题">
+    <view wx:for="{{sourceList2}}" wx:key="key" wx:for-index="idx">
+      <van-collapse value="{{ activeNames2 }}" data-id="{{item.ques_id}}" bind:change="onChange2" accordion>
+        <van-collapse-item title="{{idx+1}}.{{item.ask}}" name="{{idx+1}}">
+          {{answer}}
+        </van-collapse-item>
+      </van-collapse>
+    </view>
+  </van-tab>
+</van-tabs>
+
+
+
+<!-- <van-collapse value="{{ activeNames }}" bind:change="onChange">
+  <van-collapse-item name="1">
+    <view slot="title">有赞微商城<van-icon name="question-o" /></view>
+    提供多样店铺模板，快速搭建网上商城
+  </van-collapse-item>
+  <van-collapse-item title="有赞零售" name="2" icon="shop-o">
+    网店吸粉获客、会员分层营销、一机多种收款，告别经营低效和客户流失
+  </van-collapse-item>
+</van-collapse> -->

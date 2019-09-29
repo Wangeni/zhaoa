@@ -1,0 +1,25 @@
+.page__desc, .radio-group{
+  margin: 5px 0px;
+  padding: 10px;
+}
+
+input{
+  border:0.5;
+  border-radius:5px;
+  background-color:rgba(241,241,241,.98);
+  width: 100%;
+  margin: 5px 0px;
+  padding: 10px;
+  resize: none;
+}
+
+textarea{
+  border:0.5;
+  border-radius:5px;
+  background-color:rgba(241,241,241,.98);
+  width: 100%;
+  height: 100px;
+  margin: 5px 0px;
+  padding: 10px;
+  resize: none;
+}

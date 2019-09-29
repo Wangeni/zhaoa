@@ -1,0 +1,49 @@
+<!-- <open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data>
+<!-- 需要使用 button 来授权登录 -->
+<!-- <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view> --> 
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+
+​<van-dialog id="van-dialog" />
+
+<!-- <van-dialog
+  v-model="show"
+  image="image"
+  show-cancel-button
+>
+  <img src="../../images/reward.png" />
+</van-dialog> -->
+
+<!-- ​<van-toast id="van-toast" /> -->
+
+<!-- <modal hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
+    <view>
+      <image class="image" src="../../images/reward.png" mode='aspectFill'></image>
+    </view>
+</modal> -->
+
+<van-cell-group>
+  <van-cell icon="notes-o" title="刷题记录" is-link value="登录可查看" data-openid="{{openId}}" bind:click="history"/>
+  <van-cell icon="thumb-circle-o" data-src="../../images/reward.png" title="扫码打赏" is-link value="" bind:click="previewImage"/>
+  <!-- <van-cell title="Cell title" is-link arrow-direction="down" value="" /> -->
+</van-cell-group>
+<text>\n</text>
+<van-cell-group>
+  <van-cell icon="share" title="反馈" is-link value="" bind:click="feedback"/>
+  <van-cell icon="friends-o"title="关于" is-link value="" bind:click="aboutThis"/>
+  <!-- <van-cell title="Cell title" is-link arrow-direction="down" value="" /> -->
+</van-cell-group>
+
+<div class='footerText' bindtap='getScancode'>
+  Sometimes you have to be your own hero.
+</div>

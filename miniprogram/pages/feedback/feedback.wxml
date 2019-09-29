@@ -1,0 +1,31 @@
+<div class="viewClass">
+  <form bindsubmit="bindFormSubmit" class="formClass"> 
+    <textarea placeholder="尽情吐槽吧" class="textareaClass" name="textarea"/> 
+    <button type="primary" form-type="submit"> 提交 </button> 
+  </form> 
+</div>
+
+<!-- <van-cell-group>
+  <van-field
+    v-model="content"
+    label="吐槽"
+    type="textarea"
+    placeholder="高度自适应"
+    rows="1"
+    autosize
+    required
+    left-icon="chat-o"
+  /> 
+  <van-field
+    v-model="contact"
+    label="联系方式"
+    type="textarea"
+    placeholder="可填可不填"
+    rows="1"
+    clickable
+    left-icon="contact"
+  />
+  <van-button type="primary" size="large" bind:click="onClickButtonSubmit"> 提交 </van-button> 
+</van-cell-group> -->
+
+

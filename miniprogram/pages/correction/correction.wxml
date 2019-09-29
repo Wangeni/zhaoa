@@ -1,0 +1,17 @@
+<div class="viewClass">
+  <form bindsubmit="bindFormSubmit" data-choice="{{choice}}" data-quesid="{{quesid}}" data-key="{{key}}" data-mark="{{index}}" class="formClass"> 
+    <!-- <input name="errorType" placeholder="(选填)错误类型：答案错误、选项重复等"></input> -->
+    <text class="page__desc">(必选)错误类型：</text>
+    <radio-group class="radio-group" bindchange="radioChange">
+        <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+            <text>{{item.value}} </text><text>\n</text>
+        </radio>
+    </radio-group>
+    <textarea placeholder="(必填)错误详情：尽可能描述完整的错误信息" class="textareaClass" name="errorDetail" /> 
+    <!-- <input hidden="false" name="quesid" value="{{quesid}}" /> -->
+    <button type="primary" form-type="submit" > 提交 </button> 
+    <van-toast id="van-toast" />
+  </form> 
+  ​<van-toast id="van-toast" />
+</div>
+<van-toast id="van-toast" />

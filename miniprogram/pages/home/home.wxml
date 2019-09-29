@@ -1,0 +1,97 @@
+<!-- <import src="../../vant" /> -->
+
+<view class="container">
+  <view class="userinfo">
+    <!-- <button type="primary" size="{{primarySize}}" open-type="getUserInfo"       bindgetuserinfo="getUserInfo"> 开始刷题 </button> -->
+    <button type="primary" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 开始刷题 </button>
+    <block wx:else>
+      <button type="primary" size="{{primarySize}}" bindtap="startQues"> 开始刷题 </button>
+    </block>
+    <text>\n</text>
+
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>
+
+<!-- <navigator url="../../pages/index/index">
+  <button type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap=""> 开始刷题 </button>
+</navigator> -->
+
+<text>\n</text>
+<!-- <van-circle size="50px" v-model="{{currentRate}}" rate="1" color="{{gradientColor}}" 
+  text="渐变色" /> -->
+<van-progress percentage="{{progress}}" pivot-text="助力中" color="linear-gradient(to right, #be99ff, #7232dd)"/>
+<view class="container">
+  <view class="userinfo" style="margin-top: 20px;">
+    <button type="default" size="{{primarySize}}" bindtap="takeAdvice"> python习题 </button>
+  </view>
+</view>
+<van-dialog id="van-dialog" />
+<mp-dialog title="python题库暂未开放，你要助力吗" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}" >
+    <!-- <view>test content</view> -->
+</mp-dialog>
+<!-- <view class="progress">
+  <van-progress percentage="{{progress}}" color="linear-gradient(to right, #be99ff, #7232dd)"/>
+</view> -->
+
+<!-- <van-grid>
+  <van-grid-item icon="photo-o" text="Text" />
+  <van-grid-item icon="photo-o" text="Text" />
+  <van-grid-item icon="photo-o" text="Text" />
+  <van-grid-item icon="photo-o" text="Text" />
+</van-grid> -->
+<!-- <van-row>
+    <van-col span="8"></van-col>
+    <van-col span="8">
+      <image src="../../images/photo.png" />
+    </van-col>
+    <van-col span="8"></van-col>
+  </van-row> -->
+
+<!-- <van-image
+  round
+  width="10rem"
+  height="10rem"
+  src="../../images/photo.png"
+/> -->
+
+<van-grid :border="false" :column-num="3">
+  <van-grid-item>
+    <!-- <image src="../../images/photo.png" /> -->
+  </van-grid-item>
+  <van-row>
+    <van-col span="8"></van-col>
+    <van-col span="8">
+      <van-grid-item>
+        <!-- <image src="../../images/photo.png" /> -->
+      </van-grid-item>
+    </van-col>
+    <van-col span="8"></van-col>
+  </van-row>
+  <van-grid-item>
+    <!-- <image src="../../images/photo.png" /> -->
+  </van-grid-item>
+</van-grid>
+
+<!-- <van-grid :column-num="3">
+  <van-grid-item
+    v-for="value in 6"
+    :key="value"
+    icon="photo-o"
+    text="Text"
+  />
+</van-grid> -->
+
+<!-- <van-divider :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }"
+default="">
+  文字
+</van-divider> -->
+<!-- <view style="position:fixed;bottom:0;text-align:center">
+  文字
+</view> -->
+
+<div class='footerText' bindtap='getScancode'>
+  Sometimes you have to be your own hero.
+</div>

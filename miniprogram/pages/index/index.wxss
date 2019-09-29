@@ -1,0 +1,23 @@
+.bbSubmit{
+  margin: 5px 0px;
+}
+
+/* .choose{
+  border: 1ppx;
+  border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255)
+}
+
+.answer van-cell{
+  border:2px solid;
+  border-radius:25px;
+} */
+
+/* .answer{
+  border: 1ppx;
+  border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255)
+}
+
+div .answer{
+  border:2px solid;
+  border-radius:25px;
+} */
