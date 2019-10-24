@@ -1,7 +1,6 @@
 本程序完全使用小程序云开发实现
 
-![微信搜索小程序【找啊】访问](https://github.com/WaneGi/zhaoa/blob/master/miniprogram/images/Mini%20Programs.jpg)
-![截图](/miniprogram/images/Mini%20Programs.jpg)
+![微信搜索小程序【找啊】访问](miniprogram/images/Mini%20Programs.jpg)
 
 # 云开发 基础能力
 
