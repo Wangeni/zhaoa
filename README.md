@@ -1,4 +1,4 @@
-本程序完全使用小程序云开发实现
+本程序是小程序云开发 前端部分使用轻量级、可靠的移动端vue组件库Vant配合实现
 
 ![微信搜索小程序【找啊】访问](miniprogram/images/Mini%20Programs.jpg)
 
